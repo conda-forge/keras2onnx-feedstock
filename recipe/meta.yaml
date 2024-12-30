@@ -11,16 +11,16 @@ source:
   sha256: 8ec9c4e1c1f870d420934d1aa7cbc9faab80c6af366900bf95e5f48280c0d199
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - protobuf
     - requests
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/onnx/keras-onnx

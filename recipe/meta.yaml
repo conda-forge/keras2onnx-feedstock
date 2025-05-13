@@ -28,7 +28,7 @@ requirements:
     - onnx
     - onnxconverter-common >=1.8.0
     - fire
-    - tensorflow <2.14
+    - tensorflow <2.9
 
 test:
   imports:

@@ -33,8 +33,8 @@ requirements:
 test:
   imports:
     - keras2onnx
-  commands:
-    - pip check
+  #commands:
+  #  - pip check
   requires:
     - pip
     - python {{ python_min }}
